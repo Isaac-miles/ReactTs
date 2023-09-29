@@ -6,7 +6,7 @@
 }
 .single_item{
     display: flex;
-    width: 29%;
+    width: 35%;
     border-radius: 5px;
     padding: 20px;
     margin-top: 15px;
@@ -19,8 +19,17 @@
     border: none;
     font-size: 20px;
     color: black;
+    background-color: rgb(234, 234, 234);
 }
-.single_item_text{
+.input_item_text{
+    flex: 1;
+    padding:5px;
+    border: none;
+    font-size: 20px;
+    color: black;
+
+}
+.single_item_text:focus{
     outline: none;
 }
 .icons{
