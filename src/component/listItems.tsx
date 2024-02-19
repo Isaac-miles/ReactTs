@@ -19,7 +19,7 @@ export default function ListItems({items,setItems,completedItems,setCompletedIte
         (provided,snapshot)=>(
           <div className={`items ${snapshot.isDraggingOver? 'dragActive':''}`} ref={provided.innerRef} {...provided.droppableProps}>
          <div className='active_task'>
-          <span className="items_heading">Active {items.length > 1 ? 'Tasks' :'Task'}</span>
+          <span  className="items_heading">Active {items.length > 1 ? 'Tasks' :'Task'}</span>
          {items.length>0 && <span className='count'>{items.length}</span>}
          </div> 
           <span>Drag</span>

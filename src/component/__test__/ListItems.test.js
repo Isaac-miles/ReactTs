@@ -8,9 +8,9 @@ const MockedItemList = ({items,completedItems})=>{
     </MyProvider>
 }
 
-test("should render the correct amount of Active task", ()=>{
+test("should render the correct amount of Active task", async()=>{
     render(<MockedItemList items={3} completedItems={1} />);
 
-    const activeTasks = screen.getByText(/Active/i);
+    const activeTasks =  screen.getByText(/Active/i);
     expect(activeTasks).toBeInTheDocument();
 })
