@@ -16,4 +16,6 @@ test("renders the heading  role",async ()=>{
 
 test("getting by title",async()=>{
     render(<Heading />)
+    const title = screen.getByTitle('header')
+    expect(title).toBeInTheDocument();
 })
