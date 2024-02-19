@@ -32,3 +32,11 @@ test("renders same  prop passed to it correctly",async ()=>{
     const headingElement = await screen.findByText(/Testing the header/i);
     expect(headingElement).toBeInTheDocument();
 })
+
+//query by
+test("query by renders same  prop passed to it correctly",async ()=>{
+    render(<Heading title='Testing the header'/>);
+    const headingElement =  screen.queryByText(/should not be found /i);
+    expect(headingElement).not.toBeInTheDocument();
+})
+//
