@@ -115,9 +115,10 @@ background-color: rgb(160, 27, 27);
     justify-content: space-between;
 }
 .count{
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     border-radius: 50%;
+    text-align: center;
     color: white;
     background-color:rgba(22, 61, 22, 0.667) ;
 }
