@@ -4,6 +4,7 @@ import './App.css';
 import InputField  from './component/inputField';
 import { type Item } from './model';
 import ListItem from './component/listItems';
+import Heading from './component/header';
 
 function App() {
   const [item, setItem] = useState<string>('');
@@ -46,7 +47,8 @@ function App() {
   return (
     <DragDropContext onDragEnd={onDragHandle}>
     <div className="App">
-      <h1>Basic Crud Operation</h1>
+  
+      <Heading title='Basic Crud Operation' />
     <InputField item={item} setItem={setItem} handleSubmit={handleSubmit} />
     <ListItem items={items} setItems={setItems} completedItems={completedItems} setCompletedItems={setCompletedItems}/>
     </div>
