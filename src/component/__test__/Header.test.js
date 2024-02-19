@@ -27,3 +27,8 @@ test("getting by test-id",async()=>{
 })
 
 //Find by
+test("renders same  prop passed to it correctly",async ()=>{
+    render(<Heading title='Testing the header'/>);
+    const headingElement = screen.getByText(/Testing the header/i);
+    expect(headingElement).toBeInTheDocument();
+})
