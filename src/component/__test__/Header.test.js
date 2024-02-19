@@ -22,7 +22,7 @@ test("getting by title",()=>{
 
 test("getting by test-id",()=>{
     render(<Heading />)
-    const testId = screen.getByTestId('header-2')
+    const testId = screen.getByTestId('header-2');
     expect(testId).toBeInTheDocument();
 })
 
