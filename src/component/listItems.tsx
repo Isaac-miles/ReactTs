@@ -23,7 +23,7 @@ export default function ListItems({items,setItems,completedItems,setCompletedIte
           <span className='count'>{items.length}</span>
          </div> 
           <span>Drag</span>
-          {items.length>0 && items.map((item,index)=>(
+          {items.map((item,index)=>(
                  <ListItem item={item} setItems={setItems} key={item.id} items={items} index={index}/>
              ))}
              {provided.placeholder}
@@ -41,7 +41,7 @@ export default function ListItems({items,setItems,completedItems,setCompletedIte
           <span className='count'>{completedItems.length}</span>
          </div> 
           <span>Drop</span>
-          {completedItems.length>0 && completedItems.map((completedItem,index)=>(
+          { completedItems.map((completedItem,index)=>(
                  <ListItem 
                   item={completedItem}
                  setItems={setCompletedItems} 
