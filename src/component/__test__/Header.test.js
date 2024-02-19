@@ -25,3 +25,5 @@ test("getting by test-id",async()=>{
     const testId = screen.getByTestId('header-2')
     expect(testId).toBeInTheDocument();
 })
+
+//Find by
