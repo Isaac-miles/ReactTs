@@ -5,7 +5,6 @@ import InputField  from './component/inputField';
 import { type Item } from './model';
 import ListItem from './component/listItems';
 import Heading from './component/header';
-
 function App() {
   const [item, setItem] = useState<string>('');
   const [items, setItems] = useState<Item[]>([])

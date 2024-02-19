@@ -1,10 +1,16 @@
 import { render, screen } from '@testing-library/react';
 import ListItems from '../listItems';
+import { MyProvider } from '../../context/context';
 
+const MockedItemList = ()=>{
+    <MyProvider>
+        <ListItems items={2} completedItems={5}/>
+    </MyProvider>
+}
 
-test("rshould render the correct amount of Active task", ()=>{
-    render(<ListItems items={2} completedItems={5}/>);
+test("should render the correct amount of Active task", ()=>{
+    render(<MockedItemList />);
 
-    const activeTasks = screen.getByText(/Testing the header/i);
+    const activeTasks = screen.getByText(/Active tasks/i);
     expect(activeTasks).toBeInTheDocument();
 })
