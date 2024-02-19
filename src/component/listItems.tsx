@@ -36,7 +36,10 @@ export default function ListItems({items,setItems,completedItems,setCompletedIte
       {
         (provided,snapshot)=>(
           <div className= {`items remove ${snapshot.isDraggingOver?'dragComplete':''}`} ref={provided.innerRef} {...provided.droppableProps}>
-          <span className="items_heading">Completed Tasks</span>
+         <div className='active_task'>
+          <span className="items_heading">Active Tasks</span>
+          <span className='count'>{items.length}</span>
+         </div> 
           <span>Drop</span>
           {completedItems.map((completedItem,index)=>(
                  <ListItem 
