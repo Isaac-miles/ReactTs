@@ -39,4 +39,10 @@ test("query by renders same  prop passed to it correctly",async ()=>{
     const headingElement =  screen.queryByText(/should not be found /i);
     expect(headingElement).not.toBeInTheDocument();
 })
-//
+
+//get all by
+test("get all by: renders same  prop passed to it correctly", ()=>{
+    render(<Heading title='Testing the header'/>);
+    const headingElement =  screen.getAllByRole('heading');
+    expect(headingElement.length).toBe(2);
+})
