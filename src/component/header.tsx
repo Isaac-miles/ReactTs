@@ -2,7 +2,7 @@ import React from 'react'
 
 function Heading({title}:{title:string}) {
   return (
-    <div>{title}</div>
+    <h1>{title}</h1>
   )
 }
 
