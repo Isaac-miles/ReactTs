@@ -19,3 +19,9 @@ test("getting by title",async()=>{
     const title = screen.getByTitle('header')
     expect(title).toBeInTheDocument();
 })
+
+test("getting by test-id",async()=>{
+    render(<Heading />)
+    const testId = screen.getByTestId('header-2')
+    expect(testId).toBeInTheDocument();
+})
