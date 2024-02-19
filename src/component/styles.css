@@ -120,6 +120,7 @@ background-color: rgb(160, 27, 27);
     border-radius: 50%;
     text-align: center;
     color: white;
+    font-weight: bold;
     background-color:rgba(22, 61, 22, 0.667) ;
 }
 @media(max-width:1100px){
