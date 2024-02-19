@@ -19,11 +19,11 @@ export default function ListItems({items,setItems,completedItems,setCompletedIte
         (provided,snapshot)=>(
           <div className={`items ${snapshot.isDraggingOver? 'dragActive':''}`} ref={provided.innerRef} {...provided.droppableProps}>
          <div className='active_task'>
-          <span className="items_heading">Active Tasks</span>
+          <span className="items_heading">Active {items.length > 1 ? 'Tasks' :'Task'}</span>
           <span className='count'>{items.length}</span>
          </div> 
           <span>Drag</span>
-          {items.map((item,index)=>(
+          {items.length>0 && items.map((item,index)=>(
                  <ListItem item={item} setItems={setItems} key={item.id} items={items} index={index}/>
              ))}
              {provided.placeholder}
@@ -37,11 +37,11 @@ export default function ListItems({items,setItems,completedItems,setCompletedIte
         (provided,snapshot)=>(
           <div className= {`items remove ${snapshot.isDraggingOver?'dragComplete':''}`} ref={provided.innerRef} {...provided.droppableProps}>
          <div className='active_task'>
-          <span className="items_heading">Completed Tasks</span>
+          <span className="items_heading">Completed {completedItems.length > 1 ? 'Tasks' :'Task'}</span>
           <span className='count'>{completedItems.length}</span>
          </div> 
           <span>Drop</span>
-          {completedItems.map((completedItem,index)=>(
+          {completedItems.length>0 && completedItems.map((completedItem,index)=>(
                  <ListItem 
                   item={completedItem}
                  setItems={setCompletedItems} 
